@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+
+        <EditText
+            android:id="@+id/edt_msg"
+            android:layout_weight="1"
+            android:maxLines="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="发送"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <com.imer.View.MyListView
+        android:id="@+id/lv_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linear"
+        android:layout_margin="5dp"
+        android:divider="@null"
+        android:transcriptMode="alwaysScroll">
+    </com.imer.View.MyListView>
+
+</RelativeLayout>
